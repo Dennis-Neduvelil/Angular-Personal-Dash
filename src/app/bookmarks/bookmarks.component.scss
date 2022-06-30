@@ -1,0 +1,24 @@
+.bookmarks-wrapper{
+    height: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    max-height: 375px;
+    margin: auto;
+    overflow-y:scroll;
+    display: flex;
+    gap: 10px;
+    
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    // &::-webkit-scrollbar-thumb {
+    //     background-color: black;
+    //     border-radius: 10px;
+    // }
+
+}

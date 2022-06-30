@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined');
+
+
+
+html{
+    font-family: 'Inter', sans-serif;
+}
+html,body{
+height: 100vh;
+background-image: url('https://images.unsplash.com/photo-1656199538401-f19b01978248?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjU3MTQwMw&ixlib=rb-1.2.1&q=80&w=1920');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 40px;
+}

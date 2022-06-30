@@ -1,0 +1,10 @@
+.notes-container{
+    margin: auto;
+    max-width: 1000px;
+    height: 365px;
+    overflow: scroll;
+    overflow-x: hidden;
+        &::-webkit-scrollbar {
+        width: 5px;
+    }
+}
