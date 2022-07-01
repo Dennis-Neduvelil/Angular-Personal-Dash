@@ -1,0 +1,18 @@
+<div class="add-note-wrapper">
+  <div class="add-note-container">
+    <div class="card">
+      <h3>Add Notes</h3>
+      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+        <div class="input-container">
+            <input ngModel autocomplete="off" required class="note-title" type="text" name="noteTitle" id="" placeholder="Enter note title...">
+            <textarea ngModel autocomplete="off" required class="note-content"  name="noteContent" placeholder="Enter note content..."rows="4" cols="50"></textarea>
+        </div>
+        <div class="btn-container">
+            <button>Add Note</button>
+            <a [routerLink]="'../'">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
