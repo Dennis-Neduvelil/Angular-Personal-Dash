@@ -10,6 +10,9 @@ import { NotesComponent } from './notes/notes.component';
 import { BookmarksTileComponent } from './components/bookmarks-tile/bookmarks-tile.component';
 import { TodoTileComponent } from './components/todo-tile/todo-tile.component';
 import { NotesTileComponent } from './components/notes-tile/notes-tile.component';
+import { AddNoteComponent } from './components/add-note/add-note.component';
+import { FormsModule } from '@angular/forms';
+import { EditNoteComponent } from './components/edit-note/edit-note.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { NotesTileComponent } from './components/notes-tile/notes-tile.component
     NotesComponent,
     BookmarksTileComponent,
     TodoTileComponent,
-    NotesTileComponent
+    NotesTileComponent,
+    AddNoteComponent,
+    EditNoteComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

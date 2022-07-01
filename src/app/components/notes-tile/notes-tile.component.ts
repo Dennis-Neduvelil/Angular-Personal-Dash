@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Note } from 'src/app/shared/note.model';
 
 @Component({
   selector: 'app-notes-tile',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes-tile.component.scss']
 })
 export class NotesTileComponent implements OnInit {
+
+  @Input() note : Note
 
   constructor() { }
 

@@ -1,7 +1,12 @@
 <div class="notes-wrapper">
   <div class="notes-container">
 
-    <app-notes-tile></app-notes-tile>
+    <a [routerLink]="[note.id]" *ngFor="let note of notes">
+      <app-notes-tile [note]="note"></app-notes-tile>
+    </a>
     
+  </div>
+  <div class="btn-container">
+    <a [routerLink]="'add-notes'" class="add-btn">Add Note<i class="material-icons-outlined">note_add</i></a>
   </div>
 </div>
