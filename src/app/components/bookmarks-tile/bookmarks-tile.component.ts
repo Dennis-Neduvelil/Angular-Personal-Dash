@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Bookmark } from 'src/app/shared/bookmarks.model';
 
 @Component({
   selector: 'app-bookmarks-tile',
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class BookmarksTileComponent implements OnInit {
 
   constructor() { }
+
+  @Input() bookmark:Bookmark
+  @Input() name:string
+  @Input() url:string
 
   ngOnInit(): void {
   }

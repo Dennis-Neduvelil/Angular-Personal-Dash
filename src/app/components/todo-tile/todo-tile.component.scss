@@ -27,7 +27,7 @@
     align-items: center;
     width: 95%;
     p {
-      width: 95%;
+      width: 96%;
       color: rgba($color: white, $alpha: 0.9);
       margin-left: 10px;
       white-space: nowrap;
@@ -36,7 +36,7 @@
     }
     .button-container{
       display: flex;
-      button,a{
+      button{
         background-color: transparent;
         border: none;
         color: teal;

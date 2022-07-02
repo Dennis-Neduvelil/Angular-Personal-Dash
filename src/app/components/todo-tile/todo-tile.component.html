@@ -7,7 +7,7 @@
       {{todo.text}}
      </p>
      <div class="button-container">
-      <a [routerLink]="[todo.id]"><i class="material-icons-outlined">edit</i></a>
+      <button [routerLink]="[todo.id]"><i class="material-icons-outlined">edit</i></button>
       <button (click)="onDelete(todo.id)"><i class="material-icons-outlined">delete</i></button>
      </div>
   </div>

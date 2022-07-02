@@ -1,6 +1,13 @@
-<div>
+<div *ngIf="bookmark; else noBookmark">
   <div class="bookmark-tile">
-    <img src="https://google.com/favicon.ico" alt="image" />
-    <p class="tile-text">Google</p>
+    <img src="{{bookmark.url}}/favicon.ico" alt="image" />
+    <p class="tile-text">{{bookmark.name}}</p>
   </div>
 </div>
+
+<ng-template #noBookmark>
+  <div class="bookmark-tile">
+    <img style="filter: invert(100%); opacity:50%;" src="{{url}}" alt="image" />
+    <p class="tile-text">{{name}}</p>
+  </div>
+</ng-template>

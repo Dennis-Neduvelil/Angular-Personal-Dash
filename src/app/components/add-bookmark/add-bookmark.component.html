@@ -1,0 +1,18 @@
+<div class="add-note-wrapper">
+    <div class="add-bookmark-container">
+      <div class="card">
+        <h3>Add Bookmark</h3>
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+          <div class="input-container">
+              <input ngModel autocomplete="off" required class="bookmark-input" type="text" name="bookmarkName" id="" placeholder="Enter bookmark name...">
+              <input ngModel autocomplete="off" required class="bookmark-input" type="text" name="bookmarkURL" id="" placeholder="Enter the URL...">
+          </div>
+          <div class="btn-container">
+              <button>Add Bookmark</button>
+              <a [routerLink]="'../'">Cancel</a>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  </div>
