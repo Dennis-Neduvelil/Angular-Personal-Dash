@@ -13,6 +13,9 @@ import { NotesTileComponent } from './components/notes-tile/notes-tile.component
 import { AddNoteComponent } from './components/add-note/add-note.component';
 import { FormsModule } from '@angular/forms';
 import { EditNoteComponent } from './components/edit-note/edit-note.component';
+import { AddButtonComponent } from './components/add-button/add-button.component';
+import { AddTodoFormComponent } from './components/add-todo-form/add-todo-form.component';
+import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { EditNoteComponent } from './components/edit-note/edit-note.component';
     NotesTileComponent,
     AddNoteComponent,
     EditNoteComponent,
+    AddButtonComponent,
+    AddTodoFormComponent,
+    EditTodoComponent,
   ],
   imports: [
     BrowserModule,

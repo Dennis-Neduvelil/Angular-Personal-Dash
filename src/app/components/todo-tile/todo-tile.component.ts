@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Todo } from 'src/app/shared/todo.model';
+import { TodoService } from 'src/app/shared/todo.service';
 
 @Component({
   selector: 'app-todo-tile',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoTileComponent implements OnInit {
 
-  constructor() { }
+  @Input() todo:Todo
+
+  constructor(private todoService:TodoService) { }
 
   ngOnInit(): void {
+
+  }
+  onDelete(id:string){
+    this.todoService.deleteTodo(id)
   }
 
 }

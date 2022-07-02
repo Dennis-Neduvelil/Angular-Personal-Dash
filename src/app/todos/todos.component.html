@@ -1,9 +1,8 @@
 <div class="todos-wrapper">
   <div class="todo-container">
-    
-    <app-todo-tile></app-todo-tile>
-    <app-todo-tile></app-todo-tile>
-    <app-todo-tile></app-todo-tile>
-
+   <a *ngFor="let todo of todos">
+    <app-todo-tile [todo]="todo" (click)="toggleSelect(todo)"></app-todo-tile>
+   </a> 
   </div>
+  <app-add-button [btnName]="'Add Todo'" [route]="'add-todo'"></app-add-button>
 </div>

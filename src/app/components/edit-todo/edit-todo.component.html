@@ -1,0 +1,26 @@
+<div class="add-todo-wrapper">
+    <div class="edit-todo-container">
+      <div class="card">
+        <h3>Edit Todo</h3>
+        <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+          <div class="input-container">
+            <input
+              [ngModel]="todo.text"
+              autocomplete="off"
+              required
+              class="todo-text"
+              type="text"
+              name="todoText"
+              id=""
+              placeholder="Enter todo text..."
+            />
+          </div>
+          <div class="btn-container">
+            <button>Update Todo</button>
+            <a [routerLink]="'../'">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,21 +1,34 @@
 <div class="edit-note-wrapper">
-    <div class="edit-note-container">
-      <div class="card">
-        <h3>Edit Notes</h3>
-        <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
-          <div class="input-container">
-              <input [ngModel]="note.title"  autocomplete="off" class="note-title" type="text" name="noteTitle" id="" >
-              <textarea [ngModel]="note.content" autocomplete="off" class="note-content"  name="noteContent" rows="4" cols="50"></textarea>
+  <div class="edit-note-container">
+    <div class="card">
+      <h3>Edit Notes</h3>
+      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+        <div class="input-container">
+          <input
+            [ngModel]="note.title"
+            autocomplete="off"
+            class="note-title"
+            type="text"
+            name="noteTitle"
+            id=""
+          />
+          <textarea
+            [ngModel]="note.content"
+            autocomplete="off"
+            class="note-content"
+            name="noteContent"
+            rows="4"
+            cols="50"
+          ></textarea>
+        </div>
+        <div class="btn-container">
+          <div class="btn2">
+            <button>Update Note</button>
+            <button type="button" (click)="onDelete()">Delete Note</button>
           </div>
-          <div class="btn-container">
-              <div class="btn2">
-                <button>Update Note</button>
-                <button type="button" (click)="onDelete()">Delete Note</button>
-              </div>
-              <a [routerLink]="'../'">Cancel</a>
-          </div>
-  
-        </form>
-      </div>
+          <a [routerLink]="'../'">Cancel</a>
+        </div>
+      </form>
     </div>
   </div>
+</div>
