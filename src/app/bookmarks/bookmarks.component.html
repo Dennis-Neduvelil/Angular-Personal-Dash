@@ -3,11 +3,6 @@
     <a *ngFor="let bookmark of bookmarks" [href]="bookmark.url">
       <app-bookmarks-tile [bookmark]="bookmark"></app-bookmarks-tile>
     </a>
-    <a [routerLink]="'add-bookmark'">
-      <app-bookmarks-tile
-        [name]="'Add'"
-        [url]="'https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/bookmark_add/default/48px.svg'"></app-bookmarks-tile>
-    </a>
     <a [routerLink]="'manage-bookmark'">
       <app-bookmarks-tile
         [name]="'Manage'"

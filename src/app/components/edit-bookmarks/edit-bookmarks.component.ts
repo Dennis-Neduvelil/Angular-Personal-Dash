@@ -5,14 +5,15 @@ import { Bookmark } from 'src/app/shared/bookmarks.model';
 import { BookmarksService } from 'src/app/shared/bookmarks.service';
 
 @Component({
-  selector: 'app-manage-bookmarks',
-  templateUrl: './manage-bookmarks.component.html',
-  styleUrls: ['./manage-bookmarks.component.scss']
+  selector: 'app-edit-bookmarks',
+  templateUrl: './edit-bookmarks.component.html',
+  styleUrls: ['./edit-bookmarks.component.scss']
 })
-export class ManageBookmarksComponent implements OnInit {
+export class EditBookmarksComponent implements OnInit {
 
 bookmarks:Bookmark[]=[]
 bookmark:Bookmark | any
+
   constructor(private bookmarksService:BookmarksService,private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
@@ -22,19 +23,16 @@ bookmark:Bookmark | any
       this.bookmark = this.bookmarksService.getBookmark(id)
 
   })
-}
+  }
 
-onSubmit(form:NgForm){
-  this.bookmarksService.addBookmark(new Bookmark(form.value.bookmarkName,form.value.bookmarkURL))
-  this.router.navigateByUrl("/bookmarks")
-}
+  onFormSubmit(form:NgForm){
+    this.bookmarksService.updateBookmark(this.bookmark.id,{name:form.value.bookmarkName,url:form.value.bookmarkURL})
+    this.router.navigateByUrl("/bookmarks")
+  }
+  onDelete(){
+    alert('here')
+    this.bookmarksService.deleteBookmark(this.bookmark.id)
+    this.router.navigateByUrl("/bookmarks")
+  }
 
-onFormSubmit(form:NgForm){
-  this.bookmarksService.updateBookmark(this.bookmark.id,{name:form.value.bookmarkName,url:form.value.bookmarkURL})
-  this.router.navigateByUrl("/bookmarks")
-}
-onDelete(){
-  this.bookmarksService.deleteBookmark(this.bookmark.id)
-  this.router.navigateByUrl("/bookmarks")
-}
 }

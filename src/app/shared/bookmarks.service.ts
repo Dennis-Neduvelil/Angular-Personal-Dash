@@ -6,14 +6,7 @@ import { Bookmark } from './bookmarks.model';
 })
 export class BookmarksService {
 
-  bookmarks:Bookmark[]=[
-    new Bookmark('Google','https://www.google.com/'),
-    new Bookmark('Facebook','https://www.facebook.com/'),
-    new Bookmark('Google','https://www.google.com/'),
-    new Bookmark('Facebook','https://www.facebook.com/'),
-    new Bookmark('Google','https://www.google.com/'),
-    new Bookmark('Facebook','https://www.facebook.com/'),
-  ]
+  bookmarks:Bookmark[]=[]
 
   constructor() { }
 

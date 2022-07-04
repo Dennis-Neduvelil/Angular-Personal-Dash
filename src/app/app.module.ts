@@ -16,8 +16,8 @@ import { EditNoteComponent } from './components/edit-note/edit-note.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { AddTodoFormComponent } from './components/add-todo-form/add-todo-form.component';
 import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
-import { AddBookmarkComponent } from './components/add-bookmark/add-bookmark.component';
 import { ManageBookmarksComponent } from './components/manage-bookmarks/manage-bookmarks.component';
+import { EditBookmarksComponent } from './components/edit-bookmarks/edit-bookmarks.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +34,8 @@ import { ManageBookmarksComponent } from './components/manage-bookmarks/manage-b
     AddButtonComponent,
     AddTodoFormComponent,
     EditTodoComponent,
-    AddBookmarkComponent,
     ManageBookmarksComponent,
+    EditBookmarksComponent,
   ],
   imports: [
     BrowserModule,
