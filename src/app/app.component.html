@@ -1,8 +1,16 @@
 <div class="app-wrapper">
 
+  <img class="bg-img" [src]="bg" alt="">
+
+  <div class="image-change-button">
+    <div class="btn" (click)="changeBG()" *ngIf="!loadingImage">
+      <i class="material-icons-outlined">refresh</i>
+    </div>
+  </div>
+
   <div class="top-section">
-    <h1>19:00</h1>
-    <h2>1 january 2022</h2>
+    <h1>{{ date | date:'shortTime' }}</h1>
+    <h2>{{ date | date }}</h2>
   </div>
 
   <div class="content-section">
