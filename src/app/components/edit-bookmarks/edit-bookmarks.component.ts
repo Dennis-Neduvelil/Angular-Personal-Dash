@@ -30,7 +30,6 @@ bookmark:Bookmark | any
     this.router.navigateByUrl("/bookmarks")
   }
   onDelete(){
-    alert('here')
     this.bookmarksService.deleteBookmark(this.bookmark.id)
     this.router.navigateByUrl("/bookmarks")
   }
